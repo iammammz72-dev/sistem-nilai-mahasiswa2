@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Nilai Otomatis Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Sistem Nilai Otomatis Mahasiswa</h2>
+
+    <div class="form-group">
+        <label>Nama Mahasiswa</label>
+        <input type="text" id="nama">
+    </div>
+
+    <div class="form-group">
+        <label>Nilai Tugas (30%)</label>
+        <input type="number" id="tugas">
+    </div>
+
+    <div class="form-group">
+        <label>Nilai UTS (30%)</label>
+        <input type="number" id="uts">
+    </div>
+
+    <div class="form-group">
+        <label>Nilai UAS (40%)</label>
+        <input type="number" id="uas">
+    </div>
+
+    <button onclick="hitung()">Hitung Nilai</button>
+
+    <div id="result" class="result"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+function hitung() {
+    let nama = document.getElementById("nama").value;
+    let tugas = parseFloat(document.getElementById("tugas").value);
+    let uts = parseFloat(document.getElementById("uts").value);
+    let uas = parseFloat(document.getElementById("uas").value);
+
+    if (!nama || isNaN(tugas) || isNaN(uts) || isNaN(uas)) {
+        alert("Semua data harus diisi!");
+        return;
+    }
+
+    // Rumus
+    let nilaiAkhir = (tugas * 0.30) + (uts * 0.30) + (uas * 0.40);
+
+    // Grade otomatis
+    let grade = "";
+    if (nilaiAkhir >= 85) grade = "A";
+    else if (nilaiAkhir >= 75) grade = "B";
+    else if (nilaiAkhir >= 65) grade = "C";
+    else if (nilaiAkhir >= 50) grade = "D";
+    else grade = "E";
+
+    // Tampilkan
+    document.getElementById("result").style.display = "block";
+    document.getElementById("result").innerHTML = `
+        <b>Hasil Nilai Mahasiswa</b><br><br>
+        Nama Mahasiswa: ${nama}<br>
+        Nilai Tugas: ${tugas}<br>
+        Nilai UTS: ${uts}<br>
+        Nilai UAS: ${uas}<br><hr>
+        <b>Nilai Akhir: ${nilaiAkhir.toFixed(2)}</b><br>
+        <b>Grade: ${grade}</b>
+    `;
+}
+
